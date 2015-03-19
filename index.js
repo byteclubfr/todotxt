@@ -33,7 +33,13 @@ function parse (lines, encoding) {
     return parse(lines.toString(encoding || DEFAULT_ENCODING));
   }
 
-  return parse(lines.trim().split(/\r?\n/));
+  var content = lines.trim();
+
+  if (!content) {
+    return [];
+  }
+
+  return parse(content.split(/\r?\n/));
 }
 
 function parseLine (line, number, encoding) {

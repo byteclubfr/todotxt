@@ -12,6 +12,10 @@ describe("TodoTxt", function () {
 
   describe("Parser", function () {
 
+    it("should parse empty body", function () {
+      expect(todotxt.parse("")).toEqual([]);
+    });
+
     it("should parse line", function () {
       var items = todotxt.parse("Some text");
       expect(items).toBeAn(Array);
