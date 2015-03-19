@@ -1,0 +1,36 @@
+{
+  "name": "todotxt",
+  "version": "1.0.0",
+  "description": "Todo.txt format parser/serializer",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --check-leaks --reporter spec",
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "todo",
+    "todo.txt",
+    "stringify"
+  ],
+  "author": "Nicolas Chambrier <naholyr@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^3.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^0.17.1",
+    "expect": "^1.6.0",
+    "mocha": "^2.2.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lmtm/todotxt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lmtm/todotxt/issues"
+  },
+  "homepage": "https://github.com/lmtm/todotxt"
+}
