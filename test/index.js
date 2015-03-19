@@ -87,6 +87,16 @@ describe("TodoTxt", function () {
       expect(items[2].text).toEqual("Task 2");
     });
 
+    it("should set task's number", function () {
+      var items = todotxt.parse("Task 1\n\nTask 2\nTask 3\n\nTask 4");
+      expect(items[0].number).toEqual(1);
+      expect(items[1]).toEqual(null);
+      expect(items[2].number).toEqual(3);
+      expect(items[3].number).toEqual(4);
+      expect(items[4]).toEqual(null);
+      expect(items[5].number).toEqual(6);
+    });
+
   });
 
   describe("Stringifier", function () {

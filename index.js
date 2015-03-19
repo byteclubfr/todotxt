@@ -24,8 +24,8 @@ var RE_CONTEXT_AND_PROJECT = /\s([@\+])(\S+)/g;
 
 function parse (lines, encoding) {
   if (Array.isArray(lines)) {
-    return lines.map(function (line) {
-      return parseLine(line, encoding || DEFAULT_ENCODING);
+    return lines.map(function (line, index) {
+      return parseLine(line, index + 1, encoding || DEFAULT_ENCODING);
     });
   }
 
@@ -36,7 +36,7 @@ function parse (lines, encoding) {
   return parse(lines.trim().split(/\r?\n/));
 }
 
-function parseLine (line, encoding) {
+function parseLine (line, number, encoding) {
   if (Buffer.isBuffer(line)) {
     line = line.toString(encoding || DEFAULT_ENCODING);
   }
@@ -48,6 +48,7 @@ function parseLine (line, encoding) {
   }
 
   var props = {
+    "number": number,
     "complete": false,
     "completeDate": null,
     "priority": "",
@@ -89,6 +90,7 @@ function todoItem (props) {
   var cp = parseContextsAndProjects(props.text || "");
 
   var item = {
+    "number": props.number,
     "complete": Boolean(props.complete),
     "completeDate": (!props.completeDate || (props.completeDate instanceof Date)) ? props.completeDate : parseDate(props.completeDate),
     "priority": props.priority || "",
