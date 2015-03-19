@@ -4,7 +4,7 @@
 
 # TodoTxt
 
-[Todo.txt](http://todotxt.com) parser/serializer for node
+[Todo.txt](http://todotxt.com) parser/serializer for Node and io.js.
 
 ## API
 
