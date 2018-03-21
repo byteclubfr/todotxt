@@ -18,10 +18,10 @@ describe("TodoTxt", function () {
 
     it("should parse line", function () {
       var items = todotxt.parse("Some text");
-      expect(items).toBeAn(Array);
+      expect(Array.isArray(items)).toBe(true);
       expect(items.length).toEqual(1);
       var item = items[0];
-      expect(item).toBeAn(Object);
+      expect(typeof item).toBe("object");
       expect(item.text).toEqual("Some text");
     });
 
@@ -39,19 +39,21 @@ describe("TodoTxt", function () {
     it("should expose methods to handle projects & contexts", function () {
       var item = todotxt.parse("Some text")[0];
       // Default values
-      expect(item.addProject).toBeA(Function);
-      expect(item.removeProject).toBeA(Function);
-      expect(item.addContext).toBeA(Function);
-      expect(item.removeContext).toBeA(Function);
+      expect(typeof item.addProject).toBe("function");
+      expect(typeof item.removeProject).toBe("function");
+      expect(typeof item.addContext).toBe("function");
+      expect(typeof item.removeContext).toBe("function");
     });
 
     it("should parse completed task", function () {
       var item = todotxt.parse("x 2015-03-20 2015-03-21 Some text")[0];
       expect(item.text).toEqual("Some text");
-      expect(item.date).toBeA(Date);
+      expect(typeof item.date).toBe("object");
+      expect(item.date instanceof Date).toEqual(true);
       expect(item.date.getDate()).toEqual(21);
       expect(item.complete).toEqual(true);
-      expect(item.completeDate).toBeA(Date);
+      expect(typeof item.date).toBe("object");
+      expect(item.date instanceof Date).toEqual(true);
       expect(item.completeDate.getDate()).toEqual(20);
     });
 
