@@ -135,7 +135,7 @@ function todoItem (props) {
   function removeProject (project) {
     if (item.projects.indexOf(project) !== -1) {
       item.projects = _.without(item.projects, project);
-      item.text = removeTag(item.text, "@" + project);
+      item.text = removeTag(item.text, "+" + project);
     }
   }
 
@@ -326,4 +326,3 @@ function stringifyDate (date) {
 
   return yyyy + "-" + mm + "-" + dd;
 }
-

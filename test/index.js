@@ -133,8 +133,14 @@ describe("TodoTxt", function () {
       expect(todotxt.stringify(item)).toEqual("x Hello @Context1 @Context2");
     });
 
-    it("should add project", function () {
+    it("should add projects", function () {
       item.addProject("SayHello");
+      item.addProject("SayGoodbye");
+      expect(todotxt.stringify(item)).toEqual("x Hello @Context1 @Context2 +SayHello +SayGoodbye");
+    });
+
+    it("should remove projects", function () {
+      item.removeProject("SayGoodbye");
       expect(todotxt.stringify(item)).toEqual("x Hello @Context1 @Context2 +SayHello");
     });
 
