@@ -178,7 +178,15 @@ function regexMatchAll (string, pattern) {
 }
 
 function parseDate (string) {
-  return new Date(string);
+  var match = string.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!match) {
+    throw new Error("Bad date: " + string);
+  }
+  var year = parseInt(match[1], 10);
+  var month = parseInt(match[2], 10);
+  var day = parseInt(match[3], 10);
+  // We use the numerical Date constructor to get the local date
+  return new Date(year, month - 1, day);
 }
 
 function regexTrimLeft (string, pattern, onMatch) {
@@ -326,4 +334,3 @@ function stringifyDate (date) {
 
   return yyyy + "-" + mm + "-" + dd;
 }
-
