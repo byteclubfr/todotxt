@@ -1,6 +1,6 @@
-[![Build Status](https://img.shields.io/travis/byteclubfr/todotxt/master.svg?style=flat)](https://travis-ci.org/lmtm/todotxt)
-[![Dependency Status](https://david-dm.org/byteclubfr/todotxt.svg?style=flat)](https://david-dm.org/lmtm/todotxt)
-[![devDependency Status](https://david-dm.org/byteclubfr/todotxt/dev-status.svg?style=flat)](https://david-dm.org/lmtm/todotxt#info=devDependencies)
+[![Build Status](https://img.shields.io/travis/byteclubfr/todotxt/master.svg?style=flat)](https://travis-ci.org/byteclubfr/todotxt)
+[![Dependency Status](https://david-dm.org/byteclubfr/todotxt.svg?style=flat)](https://david-dm.org/byteclubfr/todotxt)
+[![devDependency Status](https://david-dm.org/byteclubfr/todotxt/dev-status.svg?style=flat)](https://david-dm.org/byteclubfr/todotxt#info=devDependencies)
 
 # TodoTxt
 
