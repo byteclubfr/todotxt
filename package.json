@@ -4,7 +4,8 @@
   "description": "Todo.txt format parser/serializer",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --check-leaks --reporter spec",
+    "test": "for tz in America/New_York Europe/Paris; do TZ=$tz npm run test1; done",
+    "test1": "mocha --check-leaks --reporter spec",
     "lint": "eslint ."
   },
   "keywords": [

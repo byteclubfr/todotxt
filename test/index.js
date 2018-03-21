@@ -139,12 +139,12 @@ describe("TodoTxt", function () {
     });
 
     it("should set completion date", function () {
-      item.completeDate = new Date("2015-03-20");
+      item.completeDate = new Date(2015, 2, 20);
       expect(todotxt.stringify(item)).toEqual("x 2015-03-20 Hello @Context1 @Context2 +SayHello");
     });
 
     it("should set task date too", function () {
-      item.date = new Date("2015-03-18");
+      item.date = new Date(2015, 2, 18);
       expect(todotxt.stringify(item)).toEqual("x 2015-03-20 2015-03-18 Hello @Context1 @Context2 +SayHello");
     });
 
