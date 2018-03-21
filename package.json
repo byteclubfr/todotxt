@@ -27,10 +27,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lmtm/todotxt.git"
+    "url": "https://github.com/byteclubfr/todotxt.git"
   },
   "bugs": {
-    "url": "https://github.com/lmtm/todotxt/issues"
+    "url": "https://github.com/byteclubfr/todotxt/issues"
   },
-  "homepage": "https://github.com/lmtm/todotxt"
+  "homepage": "https://github.com/byteclubfr/todotxt"
 }
